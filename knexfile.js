@@ -1,12 +1,13 @@
 // Update with your config settings.
 
 module.exports = {
+  // configuration for a development database
   development: {
     client: "sqlite3",
     connection: {
-      filename: "./data/veggies.db3",
+      filename: "./data/veggies.db3", // change the path
     },
-    useNullAsDefault: true,
+    useNullAsDefault: true, // needed only for SQLite
     migrations: {
       directory: "./data/migrations",
     },
@@ -28,6 +29,7 @@ module.exports = {
     },
   },
 
+  // configuration for a production database
   production: {
     client: "postgresql",
     connection: {
